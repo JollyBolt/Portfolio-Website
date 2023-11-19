@@ -35,11 +35,11 @@ const Hero = () => {
             </p>
           </div>
       </div>
-      <div className='mt-2 h-[300px] xl:h-[500px]'>
+      <div className='mt-2 h-[300px]  xl:h-[500px]'>
       <ComputersCanvas/>
       </div>
       {/* <ComputersCanvas/> */}
-      <div
+      {/* <div
       className='hidden absolute xs:bottom-10 bottom-32 w-full xl:flex justify-center items-center'>
         <a href="#about">
           <div className='w-[35px] h-[64px] rounded-3xl flex justify-center p-2 border-4 border-secondary items-start'>
@@ -56,7 +56,7 @@ const Hero = () => {
             />
           </div>
         </a>
-      </div>
+      </div> */}
     </section>
   )
 }

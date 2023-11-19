@@ -20,10 +20,10 @@ const Computers = () => {
   
   const handlePosition = () =>{
     if(screenSize<500)
-    return [-2,-1,-1.5]
+    return [-3,-1,-2]
     else if(screenSize<1024)
     return [0,-1,-1.5]
-    else return [0,-2,-1.5]
+    else return [0,-1,-1.5]
   }
 
   const handleScale = () =>{
@@ -31,13 +31,13 @@ const Computers = () => {
     return 0.8
     else if(screenSize<1024)
     return 1
-    else return 1.2
+    else return 1.1
   }
 
   return (
     <mesh>
       <hemisphereLight 
-      intensity={4}
+      intensity={5}
       groundColor='black' />
       <spotLight 
         position={[-20,50,10]}
@@ -50,7 +50,7 @@ const Computers = () => {
         scale={handleScale()}
 
         position={handlePosition()}
-        rotation={[-0.01,-0.2,-0.3]}
+        rotation={[-0.01,-0.2,-0.28]}
         
         
       />
