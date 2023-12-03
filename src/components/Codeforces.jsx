@@ -13,7 +13,7 @@ const Codeforces = () => {
             setUserData({...data.result})
             setLoading(false)
             getContests()
-            console.log(userData)
+            // console.log(userData)
         } catch (error) {
             console.log(error)
         }
@@ -25,7 +25,7 @@ const Codeforces = () => {
             const {data} = await axios.get('https://codeforces.com/api/user.rating?handle=ishan_sen')
             setContests(data.result)
             setLoading(false)
-            console.log(contests.length)
+            // console.log(contests.length)
         } catch (error) {
             console.log(error)
         }
@@ -34,7 +34,23 @@ const Codeforces = () => {
       getData();
     }, [])
 
-    if(loading) return "Loading..."
+    if(loading) return (
+    <>
+        <div className=' p-6 flex flex-col gap-3 sm:w-[80%] mx-auto text-lg'>
+            <div className='flex justify-between'>
+            <p className=''>Rank </p><span className='uppercase text-green-600 font-bold'>-</span>
+            </div>
+            <div className='flex justify-between'>
+            <p>Max Rating </p><span>-</span>
+            </div>
+            <div className='flex justify-between'>
+            <p>Current Rating</p> <span>-</span>
+            </div>
+            <div className='flex justify-between'>
+            <p>Contests </p><span>-</span>
+            </div>   
+        </div>
+    </>)
 
   return (
     <>
@@ -50,11 +66,7 @@ const Codeforces = () => {
             </div>
             <div className='flex justify-between'>
             <p>Contests </p><span>{contests.length}</span>
-            </div>
-            
-            
-            
-            
+            </div>   
         </div>
     </>
     
