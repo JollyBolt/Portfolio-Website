@@ -1,27 +1,37 @@
 import React, { useEffect, useState } from 'react'
 import {styles} from "../style"
-import {navLinks} from "../constants/index.js"
-import { logo,logoWhite, logoNoBg,menu,close } from '../assets'
+import {navIcons,navLinks} from "../constants/index.js"
+import { logoNoBg } from '../assets'
 // import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
+import Hamburger from './Hamburger'
 
-const Navbar = () => {
-  const [active,setActive] = useState("")
+const Navbar = ({active,setActive}) => {
   const [toggle,setToggle] = useState(false)
+
+  useEffect(() => {
+    document.body.style.overflow = toggle ? "hidden" : "unset";
+  }, [toggle]);
   const [scrolled,setScrolled] = useState(false)
 
-  useEffect(()=>{
-    const handleScroll = () =>{
-      const scrollTop = window.scrollY;
-      if(scrollTop>100){
-        setScrolled()
-      }
-    }
-  },[])
+  const changeBG = () =>{
+    if(window.scrollY>=50)
+    setScrolled(true)
+    else setScrolled(false)
+  }
+  window.addEventListener('scroll',changeBG)
+  // useEffect(()=>{
+  //   const handleScroll = () =>{
+  //     const scrollTop = window.scrollY;
+  //     if(scrollTop>100){
+  //       setScrolled()
+  //     }
+  //   }
+  // },[])
 
   return (
     <nav
-    className={`${styles.paddingX} w-full py-5 flex items-center fixed top-0 z-20 bg-primary bg-opacity-70`}
+    className={`${styles.paddingX} w-full py-5 flex items-center fixed top-0 z-20 bg-primary ${scrolled?'':'bg-opacity-0'} transition-colors`}
     id='nax'
     >
       <div
@@ -42,44 +52,46 @@ const Navbar = () => {
             Ishan Sen.
           </p>
         </HashLink>
+        
+        <div className='hidden sm:flex gap-6 items-center'>
         <ul
-        className='list-none hidden sm:flex flex-row gap-10'
+        className='list-none hidden sm:flex flex-row gap-6'
         >
           {
-            navLinks.map((link)=>(
+            navIcons.map((icon)=>(
               <li 
-              key={link.id}
-              className={`${active === link.title?"text-white":"text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer transition-all`}
-              onClick={()=> setActive(link.title)}
+              key={icon.id}
+              className={` hover:text-white text-[18px] font-medium cursor-pointer transition-all`}
               >
-                <HashLink to={`#${link.id}`}>
-                  {link.title}
-                </HashLink>
+                <a href={icon.link} target='_blank'><img src={icon.icon} className='w-[30px]' alt={icon.id} /></a>
               </li>
             ))
           }
         </ul>
+        <button className='green-pink-gradient rounded-md p-[1px]'>
+          <div className='bg-black-200 rounded-md px-3 p-[6px]'>My Resume</div>
+        </button>
+        </div>
+ 
         <div 
         className='sm:hidden flex flex-1 justify-end items-center'>
-          <img 
-          src={toggle?close:menu} 
-          onClick={()=>setToggle(prev=>!prev)}
-          alt="menu"
-          className='w-[28px] h-[28px] object-contain cursor-pointer'  />
+          <Hamburger toggle={toggle} setToggle={setToggle}/>
         </div>
+
+        <div onClick={()=>setToggle(!toggle)} className={`absolute w-full left-0  top-0 overflow-scroll overscroll-contain ${toggle?'top-20 h-[calc(100vh-5rem)] ':'-top-72 opacity-0'}`}>
         <div
-        className={`${toggle?'flex':'hidden'} p-6 black-gradient absolute top-20 right-0 my-2 min-w-[140px] z-10 rounded-xl`}>
+        className={` sm:hidden p-6 bg-black-100 w-full left-0 absolute duration-300  transition-all min-w-[140px] z-10 rounded-b-2xl flex flex-col justify-center items-center gap-5`}>
           <ul
-        className='list-none flex flex-col gap-4 justify-end items-start'
+        className='list-none w-full flex flex-col gap-4 justify-center items-center'
         >
           {
             navLinks.map((link)=>(
               <li 
               key={link.id}
-              className={`${active === link.title?"text-white":"text-secondary"} font-poppins text-[16px] font-medium cursor-pointer transition-all`}
+              className={`${active === link.id?"text-purple-500":"text-white"} uppercase font-poppins text-[16px] font-medium cursor-pointer transition-all`}
               onClick={()=> {
                 setToggle(!toggle)
-                setActive(link.title)
+                setActive(link.id)
               }}
               >
                 <HashLink to={`#${link.id}`}>
@@ -89,7 +101,26 @@ const Navbar = () => {
             ))
           }
         </ul>
+        <ul
+        className='list-none flex  flex-row gap-6'
+        >
+          {
+            navIcons.map((icon)=>(
+              <li 
+              key={icon.id}
+              className={` hover:text-white text-[18px] font-medium cursor-pointer transition-all`}
+              >
+                <a href={icon.link} target='_blank'><img src={icon.icon} className='w-[30px]' alt={icon.id} /></a>
+              </li>
+            ))
+          }
+        </ul>
+        <button className='green-pink-gradient rounded-md p-[1px]'>
+          <div className='bg-black-200 rounded-md px-3 p-[6px]'>My Resume</div>
+        </button>
+
         </div>
+      </div>
       </div>
     </nav>
   )

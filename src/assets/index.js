@@ -6,6 +6,8 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import instagram from "./instagram.png";
+import linkedin from "./linkedin.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -20,17 +22,26 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import nextjs from "./tech/nextjs.png";
+import cpp from "./tech/cpp.png";
+import java from "./tech/java.png";
+import python from "./tech/python.png";
+// import typescript from "./tech/typescript.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import threejs from "./tech/threejs.png";
+import framer from "./tech/framer.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+// import meta from "./company/meta.png";
+// import shopify from "./company/shopify.png";
+// import starbucks from "./company/starbucks.png";
+// import tesla from "./company/tesla.png";
+import sk from "./company/sk.png";
+import sharda from "./company/sharda.png";
+import dps from "./company/dps.png";
+
+// import carrent from "./carrent.png";
+// import jobit from "./jobit.png";
+// import tripguide from "./tripguide.png";
 import leetcode from "./LeetCode_logo.png"
 import codeforces from "./codeforces.png"
 
@@ -43,10 +54,12 @@ export {
   mobile,
   web,
   github,
+  linkedin,
+  instagram,
   menu,
   close,
   css,
-  docker,
+  // docker,
   figma,
   git,
   html,
@@ -54,17 +67,25 @@ export {
   mongodb,
   nodejs,
   reactjs,
-  redux,
+  // redux,
   tailwind,
-  typescript,
+  framer,
+  // typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  nextjs,
+  cpp,
+  java,
+  python,
+  // meta,
+  // shopify,
+  // starbucks,
+  // tesla,
+  sk,
+  dps,
+  sharda,
+  // carrent,
+  // jobit,
+  // tripguide,
   leetcode,
   codeforces
 };

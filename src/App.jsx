@@ -1,24 +1,30 @@
+
+import { useState } from 'react'
 import './App.css'
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, StarsCanvas, Tech, Works } from './components'
+import { About, Contact, Experience, Hero, Navbar, StarsCanvas, Tech, Projects } from './components'
+import Sidebar from './components/Sidebar'
+
 
 function App() {
+  const [active,setActive] = useState('home')
   return (
     <>
-      <div className='relative z-0 bg-primary'>
+      <div className='relative z-0 bg-primary flex'>
+        <Navbar active={active} setActive={setActive}/>
+      <Sidebar active={active} />
+      <div className='sm:ml-[24px] w-full'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <Navbar/>
-          <Hero/>
+          <Hero setActive={setActive}/>
         </div>
-        <About/>
-        <Experience/>
+        <About setActive={setActive}/>
         <Tech/>
-        <Works/>
-        <Feedbacks/>
+        <Experience setActive={setActive}/>
+        <Projects setActive={setActive}/>
         <div className='relative'>
-          <Contact/>
+          <Contact setActive={setActive}/>
           <StarsCanvas/>
         </div>
-        
+        </div>
       </div>
     </>
   )
