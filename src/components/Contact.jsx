@@ -2,7 +2,7 @@ import {useState,useRef} from 'react'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import { styles } from '../style'
-import { EarthCanvas } from './canvas'
+import { EarthCanvas, StarsCanvas } from './canvas'
 import SectionWrapper from '../hoc/SectionWrapper'
 import { slideIn } from '../utils/motion'
 // import { useInView } from 'react-intersection-observer';
@@ -74,7 +74,7 @@ const Contact = ({setActive}) => {
 
   }
   return (
-    <div  className=' xl:flex-row flex-col-reverse flex gap-10 mb-14 z-0'>
+    <div  className=' xl:flex-row flex-col-reverse flex gap-10 mb-14 z-0 relative'>
       <motion.div
       variants={slideIn('left','tween',0.2,1)}
       className='xl:w-[50%] mx-auto w-full md:w-[80%] lg:w-[70%] bg-black-100 p-8 z-0 rounded-2xl'>
@@ -115,6 +115,8 @@ const Contact = ({setActive}) => {
       className='xl:w-[50%] xl:h-auto md:h-[550px] h-[350px]'>
         <EarthCanvas/>
       </motion.div>
+      <StarsCanvas/>
+      <StarsCanvas/>
     </div>
   )
 }

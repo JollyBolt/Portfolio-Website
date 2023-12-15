@@ -20,10 +20,12 @@ function App() {
         {/* <Tech/> */}
         <Experience setActive={setActive}/>
         <Projects setActive={setActive}/>
-        <div className=''>
+        {/* <div className='relative'> */}
           <Contact setActive={setActive}/>
-          <StarsCanvas/>
-        </div>
+          {/* <div className='relative'>
+           <StarsCanvas/>
+          </div> */}
+        {/* </div> */}
         </div>
       </div>
     </>
