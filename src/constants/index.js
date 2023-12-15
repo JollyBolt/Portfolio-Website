@@ -197,7 +197,7 @@ const education = [
     link: "https://www.dpsmathuraroad.org/",
     iconBg: "black",
     date: "2019-2020",
-    CGPA: "93.2%",
+    CGPA: "94.6%",
 
   },
   {
