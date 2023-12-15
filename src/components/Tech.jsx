@@ -16,8 +16,9 @@ const Tech = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
+        className='mt-14 sm:mt-32 z-50'
       >
-        <h2 className={styles.sectionHeadText}>
+        <h2 className={`uppercase font-[Poppins] text-white text-[18px] sm:text-[26px] mt-4 tracking-wider z-20`}>
           What I Know.
         </h2>
       </motion.div>
@@ -47,4 +48,5 @@ const Tech = () => {
   )
 }
 
-export default SectionWrapper(Tech, 'tech')
+// export default SectionWrapper(Tech, 'tech')
+export default Tech

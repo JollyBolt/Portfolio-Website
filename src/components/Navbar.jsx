@@ -20,14 +20,6 @@ const Navbar = ({active,setActive}) => {
     else setScrolled(false)
   }
   window.addEventListener('scroll',changeBG)
-  // useEffect(()=>{
-  //   const handleScroll = () =>{
-  //     const scrollTop = window.scrollY;
-  //     if(scrollTop>100){
-  //       setScrolled()
-  //     }
-  //   }
-  // },[])
 
   return (
     <nav

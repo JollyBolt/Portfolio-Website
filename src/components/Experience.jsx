@@ -7,8 +7,8 @@ import SectionWrapper from '../hoc/SectionWrapper'
 import { experiences } from '../constants'
 import { textVariant } from '../utils/motion'
 import { education } from '../constants'
-import { useInView } from 'react-intersection-observer'
-import { useEffect } from "react"
+// import { useInView } from 'react-intersection-observer'
+// import { useEffect } from "react"
 
 const ExperienceCard = ({experience}) => (
 
@@ -65,15 +65,15 @@ const EducationCard = ({education}) => (
 )
 
 const Experience = ({setActive}) => {
-  const { ref, inView } = useInView({
-    /* Optional options */
-    // threshold: 0,
-  });
+  // const { ref, inView } = useInView({
+  //   /* Optional options */
+  //   // threshold: 0,
+  // });
 
-  useEffect(()=>{
-    inView? setActive('work'):''
-    // console.log(inView)
-  },[inView])
+  // useEffect(()=>{
+  //   inView? setActive('work'):''
+  //   // console.log(inView)
+  // },[inView])
   return (
     <>
       <motion.div 
@@ -85,11 +85,11 @@ const Experience = ({setActive}) => {
           <p className={`uppercase font-[Poppins] text-white text-[18px] sm:text-[26px] mt-4 tracking-wider`}>
           My Journey so far
           </p>
-          <h2 ref={ref} className={styles.sectionHeadText}>
+          <h2  className={styles.sectionHeadText}>
           Work Experience.
           </h2>
         </motion.div>
-        <div className='my-20 flex flex-col'>
+        <div className='my-8 flex flex-col'>
           <VerticalTimeline>
             {
               experiences.map((experience,index)=> (
@@ -108,7 +108,7 @@ const Experience = ({setActive}) => {
           Education.
           </h2>
         </motion.div>
-        <div className='my-20 flex flex-col'>
+        <div className='my-5  flex flex-col'>
           <VerticalTimeline>
             {
               education.map((education,index)=> (

@@ -9,7 +9,7 @@ function App() {
   const [active,setActive] = useState('home')
   return (
     <>
-      <div className='relative z-0 bg-primary flex'>
+      <div className=' z-0 bg-primary flex'>
         <Navbar active={active} setActive={setActive}/>
       <Sidebar active={active} />
       <div className='sm:ml-[24px] w-full'>
@@ -17,10 +17,10 @@ function App() {
           <Hero setActive={setActive}/>
         </div>
         <About setActive={setActive}/>
-        <Tech/>
+        {/* <Tech/> */}
         <Experience setActive={setActive}/>
         <Projects setActive={setActive}/>
-        <div className='relative'>
+        <div className=''>
           <Contact setActive={setActive}/>
           <StarsCanvas/>
         </div>

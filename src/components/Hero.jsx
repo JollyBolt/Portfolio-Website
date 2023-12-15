@@ -13,7 +13,6 @@ const Hero = ({setActive}) => {
 
   useEffect(()=>{
     inView? setActive('home'):''
-    // console.log(inView)
   },[inView])
   return (
     <section
@@ -47,7 +46,7 @@ const Hero = ({setActive}) => {
             </p>
           </div>
       </div>
-      <div className='mt-2 h-[300px]  xl:h-[500px]'>
+      <div className='mt-4 md:mt-14 h-[200px] sm:h-[300px] xl:h-[500px]'>
       <ComputersCanvas/>
       </div>
     </section>

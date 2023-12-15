@@ -23,13 +23,13 @@ const Leetcode = () => {
   return (
     <div>
         <div className='text-white sm:pl-5 rounded-2xl'>     
-            <div className='flex flex-col sm:flex-row gap-5'>
+            <div className='flex flex-row gap-1 sm:gap-5'>
                 <div className=' flex items-center justify-center mt-6 sm:mt-0'>
                     <div 
-                    className={`h-[130px] w-[130px] flex items-center justify-center rounded-full`} 
+                    className={`h-[100px] sm:h-[130px] w-[100px] sm:w-[130px] flex items-center justify-center rounded-full`} 
                     style={meterStyle}                 
                     >
-                        <div className='flex flex-col items-center bg-tertiary justify-center h-[120px] w-[120px] rounded-full' >                          
+                        <div className='flex flex-col items-center bg-tertiary justify-center h-[90px] w-[90px] sm:h-[120px] sm:w-[120px] rounded-full' >                          
                                 <span className='text-2xl font-extrabold'>{userData.totalSolved}</span>
                                 <span className='text-xs'>Solved</span>
                         </div>

@@ -28,7 +28,7 @@ const Computers = () => {
 
   const handleScale = () =>{
     if(screenSize<500)
-    return 0.8
+    return 1
     else if(screenSize<1024)
     return 1
     else return 1.1
@@ -44,7 +44,6 @@ const Computers = () => {
         angle={0.12}
         castShadow
       />
-      {/* <pointLight intensity={0.5}/> */}
       <primitive
         object={computer.scene}
         scale={handleScale()}

@@ -5,8 +5,8 @@ import { styles } from '../style'
 import { EarthCanvas } from './canvas'
 import SectionWrapper from '../hoc/SectionWrapper'
 import { slideIn } from '../utils/motion'
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from "react"
+// import { useInView } from 'react-intersection-observer';
+// import { useEffect } from "react"
 
 //DOMS9Xf_MOMWGlMKx
 //service_jf24y8c
@@ -14,15 +14,15 @@ import { useEffect } from "react"
 
 
 const Contact = ({setActive}) => {
-  const { ref, inView } = useInView({
-    /* Optional options */
-    // threshold: 0,
-  });
+  // const { ref, inView } = useInView({
+  //   /* Optional options */
+  //   // threshold: 0,
+  // });
 
-  useEffect(()=>{
-    inView? setActive('contact'):''
-    // console.log(inView)
-  },[inView])
+  // useEffect(()=>{
+  //   inView? setActive('contact'):''
+  //   // console.log(inView)
+  // },[inView])
   const formRef = useRef()
   const [form,setForm] = useState({
     name:'',
@@ -74,16 +74,16 @@ const Contact = ({setActive}) => {
 
   }
   return (
-    <div ref={ref} className=' xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
+    <div  className=' xl:flex-row flex-col-reverse flex gap-10 mb-14 z-0'>
       <motion.div
       variants={slideIn('left','tween',0.2,1)}
-      className='xl:w-[50%] mx-auto w-full md:w-[80%] lg:w-[70%] bg-black-100 p-8 rounded-2xl'>
+      className='xl:w-[50%] mx-auto w-full md:w-[80%] lg:w-[70%] bg-black-100 p-8 z-0 rounded-2xl'>
       <p className={styles.sectionSubText}>Get in touch</p>
       <h3 className={styles.sectionHeadText}>Contact.</h3>
       <form 
       ref={formRef}
       onSubmit={handleSubmit}
-      className='mt-6 flex flex-col gap-8'>
+      className='mt-6 z-0 flex flex-col gap-8'>
       
         <div className='flex-col flex'>
           <span className='text-white font-medium mb-4'>Your Name</span>
