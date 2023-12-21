@@ -138,7 +138,7 @@ const Projects = ({ setActive }) => {
         variants={textVariant()}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
+        viewport={{ once: true ,amount:0.25}}
       >
         <p className={`uppercase font-[Poppins] text-white text-[18px] sm:text-[26px] mt-4 tracking-wider`}>
           My works

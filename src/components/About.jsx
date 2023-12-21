@@ -23,7 +23,7 @@ const About = ({setActive}) => {
   return (
     <>
       <motion.div 
-      variants = {textVariant()}
+      variants = {textVariant(0.1)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}

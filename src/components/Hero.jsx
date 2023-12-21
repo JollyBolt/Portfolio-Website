@@ -16,7 +16,7 @@ const Hero = ({setActive}) => {
   },[inView])
   return (
     <section
-    className='relative w-full xl:h-screen mx-auto'>
+    className='relative  xl:h-screen mx-auto'>
       <div
       className={`${styles.paddingX}  inset-0 pt-[100px] max-w-7xl mx-auto flex flex-row items-start gap-5 `}>
         <div
@@ -28,7 +28,7 @@ const Hero = ({setActive}) => {
           />
           </div>
           <div >
-            <h1 ref={ref} className={`${styles.heroHeadText}`}>Hi, I'm <span className='text-violet-450'>Ishan.</span></h1>
+            <h1 ref={ref} className={`${styles.heroHeadText}`}>Hi, I'm <span className='text-violet-500'>Ishan.</span></h1>
             <p 
             
             className={`${styles.heroSubText} mt-2 text-white-100`}>
@@ -46,7 +46,7 @@ const Hero = ({setActive}) => {
             </p>
           </div>
       </div>
-      <div className='mt-4 md:mt-14 h-[200px] sm:h-[300px] xl:h-[500px]'>
+      <div className='mt-4 md:mt-14 xl:mt-2 h-[200px] sm:h-[300px] md:h-[400px] xl:h-[500px] overflow-visible'>
       <ComputersCanvas/>
       </div>
     </section>

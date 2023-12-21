@@ -4,9 +4,9 @@ import emailjs from '@emailjs/browser'
 import { styles } from '../style'
 import { EarthCanvas, StarsCanvas } from './canvas'
 import SectionWrapper from '../hoc/SectionWrapper'
-import { slideIn } from '../utils/motion'
-// import { useInView } from 'react-intersection-observer';
-// import { useEffect } from "react"
+import { slideIn,fadeIn } from '../utils/motion'
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from "react"
 
 //DOMS9Xf_MOMWGlMKx
 //service_jf24y8c
@@ -14,15 +14,15 @@ import { slideIn } from '../utils/motion'
 
 
 const Contact = ({setActive}) => {
-  // const { ref, inView } = useInView({
-  //   /* Optional options */
-  //   // threshold: 0,
-  // });
+  const { ref, inView } = useInView({
+    /* Optional options */
+    // threshold: 0,
+  });
 
-  // useEffect(()=>{
-  //   inView? setActive('contact'):''
-  //   // console.log(inView)
-  // },[inView])
+  useEffect(()=>{
+    inView? setActive('contact'):''
+    // console.log(inView)
+  },[inView])
   const formRef = useRef()
   const [form,setForm] = useState({
     name:'',
@@ -74,12 +74,16 @@ const Contact = ({setActive}) => {
 
   }
   return (
-    <div  className=' xl:flex-row flex-col-reverse flex gap-10 mb-14 z-0 relative'>
+    <div  className=' xl:flex-row flex-col-reverse flex gap-10 mb-14 z-0 relative overflow-hidden'>
       <motion.div
-      variants={slideIn('left','tween',0.2,1)}
+      variants={fadeIn('','',0.2,1)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true ,amount:0.25}}
+      // variants={slideIn('left','tween',0.2,1)}
       className='xl:w-[50%] mx-auto w-full md:w-[80%] lg:w-[70%] bg-black-100 p-8 z-0 rounded-2xl'>
       <p className={styles.sectionSubText}>Get in touch</p>
-      <h3 className={styles.sectionHeadText}>Contact.</h3>
+      <h3 ref={ref} className={styles.sectionHeadText}>Contact.</h3>
       <form 
       ref={formRef}
       onSubmit={handleSubmit}
@@ -111,7 +115,11 @@ const Contact = ({setActive}) => {
       </form>
       </motion.div>
       <motion.div
-      variants={slideIn('right','tween',0.2,1)}
+      variants={fadeIn('','',0.2,1)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true,amount:0.25 }}
+      // variants={slideIn('right','tween',0.2,1)}
       className='xl:w-[50%] xl:h-auto md:h-[550px] h-[350px]'>
         <EarthCanvas/>
       </motion.div>

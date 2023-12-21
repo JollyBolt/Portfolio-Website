@@ -22,7 +22,7 @@ const Computers = () => {
     if(screenSize<500)
     return [-3,-1,-2]
     else if(screenSize<1024)
-    return [0,-1,-1.5]
+    return [0,-2,-1.5]
     else return [0,-1,-1.5]
   }
 

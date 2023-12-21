@@ -23,7 +23,7 @@ const Navbar = ({active,setActive}) => {
 
   return (
     <nav
-    className={`${styles.paddingX} w-full py-5 flex items-center fixed top-0 z-20 bg-primary ${scrolled?'':'bg-opacity-0'} transition-colors`}
+    className={`${styles.paddingX} sm:ml-[24px] w-full py-5 flex items-center fixed top-0 z-20 bg-primary ${scrolled?'':'bg-opacity-0'} transition-colors`}
     id='nax'
     >
       <div
@@ -60,9 +60,9 @@ const Navbar = ({active,setActive}) => {
             ))
           }
         </ul>
-        <button className='green-pink-gradient rounded-md p-[1px]'>
-          <div className='bg-black-200 rounded-md px-3 p-[6px]'>My Resume</div>
-        </button>
+        <a href='https://drive.google.com/file/d/1uqcO16jXUVdW2Jp5hlUNbaLXzDb0JhFF/view?usp=sharing' target='_blank' className='green-pink-gradient rounded-md p-[1px] overflow-hidden'>
+          <div  className='bg-black-200 rounded-md px-3 p-[6px]'>My Resume</div>
+        </a>
         </div>
  
         <div 
@@ -107,9 +107,9 @@ const Navbar = ({active,setActive}) => {
             ))
           }
         </ul>
-        <button className='green-pink-gradient rounded-md p-[1px]'>
+        <a href='https://drive.google.com/file/d/1uqcO16jXUVdW2Jp5hlUNbaLXzDb0JhFF/view?usp=sharing' target='_blank'  className='green-pink-gradient rounded-md p-[1px]'>
           <div className='bg-black-200 rounded-md px-3 p-[6px]'>My Resume</div>
-        </button>
+        </a>
 
         </div>
       </div>

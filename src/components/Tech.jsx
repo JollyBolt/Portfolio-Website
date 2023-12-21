@@ -27,7 +27,8 @@ const Tech = () => {
         {technologies.map((tech, index) => (
           <Tilt key={index}>
             <motion.div
-              variants={fadeIn("up", "", 0.1*index, 0.6)}
+              variants={fadeIn("", "", 0.1*index, 0.6)}
+              // variants={fadeIn("up", "", 0.1*index, 0.6)}
               // variants={fadeIn("up", "spring", 0.2*index, 0.2)}
               initial="hidden"
               whileInView="show"

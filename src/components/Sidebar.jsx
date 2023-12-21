@@ -5,7 +5,7 @@ import { HashLink } from 'react-router-hash-link'
 
 const Sidebar = ({active,setActive}) => {
     return (
-        <div className='hidden sm:flex  h-[calc(100vh-5rem)] fixed top-20 bg-black left-0 text-white pb-20 '>
+        <div className='hidden sm:flex  h-[calc(100vh-5rem)] fixed top-20 bg-primary left-0 text-white pb-20 '>
             <ul className=' flex justify-between flex-col'>
                 {sideBarLinks.map((link, index) => (
                     <li
