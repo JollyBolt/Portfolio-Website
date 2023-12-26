@@ -11,7 +11,6 @@ const ProjectModal = ({open,setOpen,currProject}) => {
 
   const { name, images, description, tech, github_link, live_link, features } = currProject
   
-  // console.log(props)
   const [image, setImage] = useState(images[0])
   return (
     <div onClick={() => setOpen(!open)} className={`fixed inset-0 z-50 transition-all  flex ${open ? "bg-black/60" : "invisible"} `}>
@@ -33,9 +32,9 @@ const ProjectModal = ({open,setOpen,currProject}) => {
                 </a>
               </div>
         <div className='flex flex-col lg:flex-row'>
-          <div className='flex flex-col xl:w-1/2 p-3 sm:mt-5'>
+          <div className='flex flex-col xl:w-1/2 p-3 sm:mt-5 '>
             <img src={image} alt=""
-              className='rounded-2xl object-scale-down h-[150px] sm:h-[310px] '
+              className='rounded-2xl object-scale-down h-[150px] sm:h-[310px] border-2 bg-black'
             />
             <div className='flex justify-between mt-5'>
               {
@@ -43,7 +42,7 @@ const ProjectModal = ({open,setOpen,currProject}) => {
                   <img
                     key={index}
                     src={im}
-                    className='w-[23%] h-[80px] object-cover'
+                    className='w-[23%] h-[80px] object-cover border rounded-lg'
                     onMouseEnter={() => setImage(im)}
                     onMouseLeave={() => setImage(images[0])}
                   />

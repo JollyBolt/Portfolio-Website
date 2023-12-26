@@ -34,6 +34,10 @@ import sk from "./company/sk.png";
 import sharda from "./company/sharda.png";
 import dps from "./company/dps.png";
 //Projects
+import in1 from "./projects/iNotes/1.jpg"
+import in2 from "./projects/iNotes/2.jpg"
+import in3 from "./projects/iNotes/3.jpg"
+import in4 from "./projects/iNotes/4.jpg"
 import wia1 from "./projects/WatchItAll/1.jpg"
 import wia2 from "./projects/WatchItAll/2.jpg"
 import wia3 from "./projects/WatchItAll/3.jpg"
@@ -73,6 +77,10 @@ export {
   sk,
   dps,
   sharda,
+  in1,
+  in2,
+  in3,
+  in4,
   wia1,
   wia2,
   wia3,

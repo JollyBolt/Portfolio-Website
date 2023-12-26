@@ -19,6 +19,10 @@ import {
   sk,
   dps,
   sharda,
+  in1,
+  in2,
+  in3,
+  in4,
   wia1,
   wia2,
   wia3,
@@ -288,9 +292,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    images: [wia1, wia2, wia3, wia4],
-    github_link: "https://github.com/JollyBolt/WatchItAll",
-    live_link: "https://watchitall-ishan.netlify.app/"
+    images: [in1, in2, in3, in4],
+    github_link: "https://github.com/JollyBolt/iNotes",
+    live_link: "https://inotes-oyvc.onrender.com"
   },
   {
     name: "Watch It All",
