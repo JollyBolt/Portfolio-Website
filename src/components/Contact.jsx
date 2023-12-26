@@ -8,11 +8,6 @@ import { slideIn,fadeIn } from '../utils/motion'
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from "react"
 
-//DOMS9Xf_MOMWGlMKx
-//service_jf24y8c
-// template_lu5ozlb
-
-
 const Contact = ({setActive}) => {
   const { ref, inView } = useInView({
     /* Optional options */
@@ -21,7 +16,6 @@ const Contact = ({setActive}) => {
 
   useEffect(()=>{
     inView? setActive('contact'):''
-    // console.log(inView)
   },[inView])
   const formRef = useRef()
   const [form,setForm] = useState({

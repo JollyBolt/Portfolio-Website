@@ -12,20 +12,14 @@ function App() {
       <div className=' z-0 bg-primary flex'>
         <Navbar active={active} setActive={setActive}/>
       <Sidebar active={active} />
-      <div className='sm:ml-[24px] w-full'>
+      <div className='sm:ml-[24px] w-full overflow-x-hidden'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <Hero setActive={setActive}/>
         </div>
         <About setActive={setActive}/>
-        {/* <Tech/> */}
         <Experience setActive={setActive}/>
         <Projects setActive={setActive}/>
-        {/* <div className='relative'> */}
-          <Contact setActive={setActive}/>
-          {/* <div className='relative'>
-           <StarsCanvas/>
-          </div> */}
-        {/* </div> */}
+        <Contact setActive={setActive}/>
         </div>
       </div>
     </>
