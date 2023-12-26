@@ -60,7 +60,7 @@ const Navbar = ({active,setActive}) => {
             ))
           }
         </ul>
-        <a href='https://drive.google.com/file/d/1uqcO16jXUVdW2Jp5hlUNbaLXzDb0JhFF/view?usp=sharing' target='_blank' className='green-pink-gradient rounded-md p-[1px] overflow-hidden'>
+        <a href='https://drive.google.com/file/d/15lB-SM3ZVwLZs_FPtE1NsDek8kG-owdc/view?usp=sharing' target='_blank' className='green-pink-gradient rounded-md p-[1px] overflow-hidden'>
           <div  className='bg-black-200 rounded-md px-3 p-[6px]'>My Resume</div>
         </a>
         </div>
@@ -107,7 +107,7 @@ const Navbar = ({active,setActive}) => {
             ))
           }
         </ul>
-        <a href='https://drive.google.com/file/d/1uqcO16jXUVdW2Jp5hlUNbaLXzDb0JhFF/view?usp=sharing' target='_blank'  className='green-pink-gradient rounded-md p-[1px]'>
+        <a href='https://drive.google.com/file/d/15lB-SM3ZVwLZs_FPtE1NsDek8kG-owdc/view?usp=sharing' target='_blank'  className='green-pink-gradient rounded-md p-[1px]'>
           <div className='bg-black-200 rounded-md px-3 p-[6px]'>My Resume</div>
         </a>
 
