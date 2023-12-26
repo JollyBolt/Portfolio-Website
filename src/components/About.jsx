@@ -42,7 +42,7 @@ const About = ({setActive}) => {
       whileInView="show"
       viewport={{ once: true }}
       className="mt-1 text-[17px] text-secondary max-w-3xl leading-[30px]">
-      As a dedicated and versatile full-stack developer, I bring comprehensive expertise in both front-end and back-end technologies. <br className="lg:hidden"/> My proficiency encompasses the seamless integration of <b>React</b> and <b>Next.js</b> for dynamic user interfaces, as well as robust back-end development.<br  className="lg:hidden"/> <span ref={ref}> </span> With a commitment to optimizing user experiences and leveraging cutting-edge technologies, I excel in creating scalable and efficient digital solutions. My skills extend to full-stack architecture, ensuring end-to-end project success.
+      As a dedicated and versatile full-stack developer, I bring comprehensive expertise in both front-end and back-end technologies. <br className="lg:hidden"/> My proficiency encompasses the seamless integration of <b>React</b> and <b>Next.js</b> for dynamic user interfaces, as well as robust back-end development.<br  className="lg:hidden"/> <span ref={ref}> </span> With a strong foundation in data structures and algorithms, I am adept at creating scalable and efficient digital solutions. My commitment to optimizing user experiences and leveraging cutting-edge technologies is complemented by a strategic approach to problem-solving. 
       </motion.p>
       <p className={`uppercase font-[Poppins] text-white text-[26px] mt-14 tracking-wider`}>
       My coding profiles
