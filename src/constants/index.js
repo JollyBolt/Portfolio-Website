@@ -50,6 +50,9 @@ export const navIcons = [
     link: "https://www.instagram.com/ishan._.sen/"
   },
 ];
+
+export const resumeLink = "https://drive.google.com/file/d/11U2QDa-xtZV8_tuff2zNVpWHw6-_MXdV/view?usp=sharing"
+
 export const navLinks = [
   {
     id: "about",

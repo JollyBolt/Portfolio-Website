@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {styles} from "../style"
-import {navIcons,navLinks} from "../constants/index.js"
+import {navIcons,navLinks,resumeLink} from "../constants/index.js"
 import { logoNoBg } from '../assets'
 // import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
@@ -60,7 +60,7 @@ const Navbar = ({active,setActive}) => {
             ))
           }
         </ul>
-        <a href='https://drive.google.com/file/d/15lB-SM3ZVwLZs_FPtE1NsDek8kG-owdc/view?usp=sharing' target='_blank' className='green-pink-gradient rounded-md p-[1px] overflow-hidden'>
+        <a href={resumeLink} target='_blank' className='green-pink-gradient rounded-md p-[1px] overflow-hidden'>
           <div  className='bg-black-200 rounded-md px-3 p-[6px]'>My Resume</div>
         </a>
         </div>
@@ -107,7 +107,7 @@ const Navbar = ({active,setActive}) => {
             ))
           }
         </ul>
-        <a href='https://drive.google.com/file/d/15lB-SM3ZVwLZs_FPtE1NsDek8kG-owdc/view?usp=sharing' target='_blank'  className='green-pink-gradient rounded-md p-[1px]'>
+        <a href={resumeLink} target='_blank'  className='green-pink-gradient rounded-md p-[1px]'>
           <div className='bg-black-200 rounded-md px-3 p-[6px]'>My Resume</div>
         </a>
 
